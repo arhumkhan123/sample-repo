@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9dec2d8d31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="header-text">
+                <h1>Hi <span class="wave">👋</span>,
+                    I'm <span>Joe</span>, <br>a <span>Software Engineer</span> from Miami, FL</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/linkedin-headshot-photography-examples-1.png" alt="Joe">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="mydesc">"Hello there! 👋 I'm Joe, a CS student at University of Michigan set to graduate in December 2023. ⛸️ Ice hockey is my passion, and I've been fortunate to gain  experience through internships and thrilling tournaments! 🏒 When I'm not coding, you can catch me perfecting my skills at the roller rink 🎿 or having a blast hanging out with my amazing teammates! 🎉 Let's score some incredible goals together and have a ton of fun along the way! 🚀😄" 🚀😄</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education </p>
+                    </div>
+                   
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>June 2022 - Current</span><br>Software Development at Google</li>
+                            <li><span>August 2022 - December 2023</span><br>Software Development at Amazon</li>
+                            <li><span>May 2020 - August 2020</span><br>Software Development at Microsoft</li>
+                            <li><span>September 2019 - December 2019</span><br>Software Developer at Facebook</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>December 2023</span><br>BS in Computer Science from UMich</li>
+                            <li><span>GPA</span><br>4.0</li>
+
+                            <li><span>Concentration</span><br>High Perfomance Computing</li>
+                            
+
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/screenshot.png" alt="React App">
+                    <div class="layer">
+                        <h3>React Weather App</h3>
+                        <p>React weather app which shows current forecase made in React</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/2k23-booker-crop.png" alt="ball">
+                    <div class="layer">
+                        <h3>Basketball Game Clone</h3>
+                        <p>Video Game where you can play basketball</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #B3A369;"></i>bob@email.com</p>
+                    <p><i class="fa-solid fa-phone" style="color:#B3A369 ;"></i>123456789</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:bob@email.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <a href="images/Basic_Resume.docx.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="Message" rows="6" placeholder="Type your message here"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
